@@ -1,0 +1,255 @@
+@media (max-width: 420px) {
+        		      body {
+        		        padding: 0;
+        		      }
+        		
+        		      .phone-frame {
+        				width: 100%;
+        				height: 100vh;
+        				height: 100svh;
+        				min-height: 100vh;
+        				min-height: 100svh;
+        				max-height: 100vh;
+        				max-height: 100svh;
+        				border-radius: 0;
+        				border: none;
+        				aspect-ratio: auto;
+        				overflow: hidden;
+        				}
+        		
+        		      .opening-screen {
+        		        padding-top: 34px;
+        		      }
+        		
+        		      .opening-content {
+        		        max-width: 315px;
+        		      }
+        		
+        		      .envelope-button {
+        		        min-height: 265px;
+        		      }
+        		
+        		      .envelope-card {
+        		        width: 286px;
+        		        height: 210px;
+        		      }
+        		
+        		      .content {
+        		        padding-inline: 20px;
+        		      }
+        		
+        		      .photo-card {
+        		        min-height: 400px;
+        		      }
+        		    }
+
+@media (max-width: 360px) {
+        		      .countdown {
+        		        gap: 6px;
+        		      }
+
+        		      .countdown div {
+        		        min-height: 68px;
+        		        padding-inline: 3px;
+        		      }
+
+        		      .countdown strong {
+        		        font-size: 1.35rem;
+        		      }
+
+        		      .countdown span {
+        		        font-size: 0.48rem;
+        		        letter-spacing: 0.08em;
+        		      }
+        		    }
+
+@media (max-width: 420px) {
+  .content {
+    padding-top: max(1.5rem, env(safe-area-inset-top));
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+
+  .hero {
+    min-height: 82svh;
+    padding-inline: 1.125rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.15rem, 15vw, 4.4rem);
+  }
+
+  .hero .date-card {
+    padding-inline: 0.85rem;
+  }
+
+  .hero .date-main {
+    font-size: clamp(1.45rem, 7vw, 1.85rem);
+  }
+
+  .music-button {
+    right: max(12px, env(safe-area-inset-right));
+  }
+
+  .event-large-content h3 {
+    font-size: clamp(1.15rem, 5.5vw, 1.35rem);
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .phone-frame {
+    width: min(100%, 1120px);
+    height: min(calc(100vh - 4rem), 1000px);
+    min-height: min(700px, calc(100vh - 4rem));
+    aspect-ratio: auto;
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 28px;
+  }
+
+  .content {
+    padding: 3rem clamp(2.5rem, 7vw, 5.5rem) 4rem;
+  }
+
+  .hero {
+    min-height: min(78svh, 760px);
+    margin-inline: calc(-1 * clamp(2.5rem, 7vw, 5.5rem));
+  }
+
+  .hero h1 {
+    font-size: clamp(5rem, 10vw, 8rem);
+  }
+
+  .hero .date-card {
+    width: min(100%, 360px);
+  }
+
+  .quote {
+    margin-block: var(--space-2xl);
+  }
+
+  .section {
+    margin-top: var(--space-2xl);
+    padding: var(--space-xl) clamp(2rem, 5vw, 4rem);
+  }
+
+  .photo-section[data-section="story"] {
+    margin-inline: 0;
+  }
+
+  .photo-section[data-section="story"] .photo-card {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    align-items: stretch;
+    background: var(--surface-soft);
+  }
+
+  .photo-section[data-section="story"] .photo-card img {
+    position: static;
+    z-index: auto;
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 500px;
+  }
+
+  .photo-section[data-section="story"] .photo-card::after {
+    display: none;
+  }
+
+  .photo-section[data-section="story"] .photo-message {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    color: var(--text-primary);
+    text-align: left;
+  }
+
+  .photo-section[data-section="story"] .photo-message h2 {
+    color: var(--text-primary);
+  }
+
+  .photo-section[data-section="story"] .photo-message p {
+    color: var(--text-secondary);
+  }
+
+  .event-large-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    border: 0;
+  }
+
+  .event-large-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-editorial);
+  }
+
+  .event-large-icon {
+    margin-bottom: 0.75rem;
+  }
+
+  .countdown {
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .countdown strong {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  [data-section="rsvp"] {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  [data-section="rsvp"] .button-primary {
+    width: min(100%, 400px);
+  }
+
+  .photo-section:not([data-section="story"]) {
+    margin-inline: calc(-1 * clamp(2.5rem, 7vw, 5.5rem));
+  }
+}
+
+@media (min-width: 700px) and (prefers-reduced-motion: reduce) {
+  .hero-image {
+    animation: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .countdown span {
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 420px) {
+  .opening-screen { padding: max(22px, env(safe-area-inset-top)) 20px max(22px, env(safe-area-inset-bottom)); }
+  .opening-content { max-width: 340px; }
+  .envelope-button { min-height: 224px; }
+  .envelope-card { width: min(100%, 300px); height: 220px; }
+}
+@media (max-height: 700px) {
+  .opening-content { padding-block: .25rem; }
+  .opening-label { font-size: 1.25rem; }
+  .envelope-button { min-height: 195px; }
+  .envelope-card { height: 200px; }
+  .envelope-body, .envelope-pocket { height: 142px; }
+  .envelope-flap { bottom: 76px; }
+  .wax-seal { bottom: 67px; }
+}
+
+/* Ajuste localizado del ritmo vertical en la portada móvil. */
+@media (max-width: 430px) {
+  .opening-content { gap: .25rem; }
+  .intro-content { gap: .625rem; }
+}
