@@ -11,7 +11,6 @@
   const gifts = wedding.gifts || {};
   const music = wedding.music || {};
   const images = wedding.images || {};
-  const theme = window.WEDDING_THEME || {};
   const sections = window.WEDDING_SECTIONS || {};
 
   function setText(selector, value) {
@@ -199,37 +198,6 @@
   setText('#openGoogleMaps', labels.mapsOpen || 'Abrir en Google Maps');
   setText('#calendarLink', labels.calendar || 'Agregar fecha al calendario');
   setText('#whatsappLink', labels.whatsapp || 'Confirmar por WhatsApp');
-
-  if (theme.colors || theme.fonts) {
-    const colors = theme.colors || {};
-    const fonts = theme.fonts || {};
-    const root = document.documentElement.style;
-    const colorVariables = {
-      '--color-fondo': colors.fondo,
-      '--color-fondo-2': colors.fondo2,
-      '--color-tarjeta-solida': colors.surface,
-      '--color-tarjeta': colors.surfaceSoft,
-      '--color-texto-suave': colors.textSecondary,
-      '--color-borde': colors.border,
-      '--color-principal': colors.principal,
-      '--color-secundario': colors.secundario,
-      '--color-acento': colors.acento,
-      '--color-texto': colors.texto,
-      '--color-blanco': colors.blanco,
-      '--boton-sobre-fondo': colors.principal,
-      '--boton-sobre-fondo-2': colors.secundario,
-      '--boton-general-fondo': colors.principal,
-      '--boton-general-fondo-2': colors.secundario,
-      '--boton-general-hover': colors.principal,
-      '--boton-secundario-texto': colors.principal
-    };
-    Object.entries(colorVariables).forEach(([name, value]) => {
-      if (value) root.setProperty(name, value);
-    });
-    if (fonts.heading) root.setProperty('--font-heading', `"${fonts.heading}"`);
-    if (fonts.body) root.setProperty('--font-body', `"${fonts.body}"`);
-    if (fonts.script) root.setProperty('--font-script', `"${fonts.script}"`);
-  }
 
   document.querySelectorAll('[data-section]').forEach((section) => {
     if (sections[section.dataset.section] === false) section.hidden = true;

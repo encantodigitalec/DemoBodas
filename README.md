@@ -56,6 +56,18 @@ teléfono válido se ocultan RSVP y WhatsApp, y sin fecha válida no se genera e
 contador ni el enlace de calendario. Sin archivo de música se oculta su control;
 los datos bancarios vacíos se omiten.
 
+### Demo de paletas por URL
+
+La invitacion acepta un parametro `tema` para mostrar las tres demos:
+
+- `?tema=olivo`: verde bosque y salvia (predeterminado).
+- `?tema=azul`: azul acero.
+- `?tema=vino`: vino y piedra.
+
+Agrega cada valor al enlace publicado de la invitacion desde los botones de la
+landing comercial. Si el parametro falta o no coincide con una paleta valida,
+se muestra el tema olivo.
+
 ### Campos requeridos y opcionales
 
 | Campo | Requisito y formato |
